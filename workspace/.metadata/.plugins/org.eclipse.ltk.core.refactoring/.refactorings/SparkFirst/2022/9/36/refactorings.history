@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;SparkFirst/src/main/scala/pack/day28.scala&apos; to &apos;Day28.scala&apos;" description="Rename resource &apos;day28.scala&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/scala/pack/day28.scala" name="Day28.scala" stamp="1662201174976" updateReferences="true"/>
+</session>

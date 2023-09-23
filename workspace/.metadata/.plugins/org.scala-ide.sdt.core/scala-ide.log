@@ -1,0 +1,1731 @@
+2022-08-07 19:28:41,849 ERROR [main] - Statistics - Statistics file `C:\Users\jetty\.scalaide\statistics` is corrupted. A new one is being created. Corrupted content was:
+
+com.cedarsoftware.util.io.JsonIoException: error parsing JSON value
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:529)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:289)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:262)
+	at org.scalaide.core.internal.statistics.Statistics.read(Statistics.scala:74)
+	at org.scalaide.core.internal.statistics.Statistics.$anonfun$readStats$1(Statistics.scala:52)
+	at org.scalaide.core.internal.statistics.Statistics.$anonfun$readStats$1$adapted(Statistics.scala:51)
+	at org.scalaide.core.ScalaIdeDataStore$.$anonfun$validate$2(ScalaIdeDataStore.scala:59)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.core.ScalaIdeDataStore$.validate(ScalaIdeDataStore.scala:59)
+	at org.scalaide.core.internal.statistics.Statistics.readStats(Statistics.scala:51)
+	at org.scalaide.core.internal.statistics.Statistics.<init>(Statistics.scala:30)
+	at org.scalaide.core.internal.ScalaPlugin.stats$lzycompute(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.stats(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.statistics(ScalaPlugin.scala:138)
+	at org.scalaide.core.internal.ScalaPlugin.start(ScalaPlugin.scala:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:933)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:103)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:368)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:446)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.ui.internal.registry.PerspectiveDescriptor.createFactory(PerspectiveDescriptor.java:75)
+	at org.eclipse.ui.internal.WorkbenchPage.createPerspective(WorkbenchPage.java:4172)
+	at org.eclipse.ui.internal.WorkbenchPage.setPerspective(WorkbenchPage.java:4081)
+	at org.eclipse.ui.internal.WorkbenchWindow.setup(WorkbenchWindow.java:744)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:91)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.inject(ContextInjectionFactory.java:73)
+	at org.eclipse.ui.internal.Workbench.createWorkbenchWindow(Workbench.java:1494)
+	at org.eclipse.ui.internal.Workbench.getActiveWorkbenchWindow(Workbench.java:1468)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.updateActiveShell(WorkbenchSourceProvider.java:907)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.getCurrentState(WorkbenchSourceProvider.java:115)
+	at org.eclipse.ui.internal.services.WorkbenchSourceProvider.lambda$2(WorkbenchSourceProvider.java:668)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.filterEvent(Display.java:1271)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1078)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1103)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1088)
+	at org.eclipse.swt.widgets.Decorations.WM_ACTIVATE(Decorations.java:1698)
+	at org.eclipse.swt.widgets.Shell.WM_ACTIVATE(Shell.java:2277)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4840)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:359)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1657)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2199)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:5178)
+	at org.eclipse.swt.internal.win32.OS.BringWindowToTop(Native Method)
+	at org.eclipse.swt.widgets.Decorations.bringToTop(Decorations.java:232)
+	at org.eclipse.swt.widgets.Shell.open(Shell.java:1270)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.postProcess(WBWRenderer.java:784)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1076)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+Caused by: com.cedarsoftware.util.io.JsonIoException: EOF reached prematurely
+	at com.cedarsoftware.util.io.JsonParser.error(JsonParser.java:584)
+	at com.cedarsoftware.util.io.JsonParser.readValue(JsonParser.java:278)
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:521)
+	... 101 more
+2022-08-07 19:30:45,671 ERROR [main] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.project.registry.ProjectRegistryRefreshJob).
+2022-08-07 19:30:45,671 ERROR [main] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-08-07 19:34:45,495  WARN [main] - ScalaProject - Project SparkFirst has platform default sourceLevel.
+2022-08-07 19:34:45,495  WARN [main] - ScalaProject - Project SparkFirst runs on platform default installation.
+2022-08-07 19:34:45,921  WARN [main] - ScalaProject - Project SparkFirst has platform default sourceLevel.
+2022-08-07 19:34:45,921  WARN [main] - ScalaProject - Project SparkFirst runs on platform default installation.
+2022-08-07 19:34:46,387  WARN [Worker-9] - ScalaProject - Project SparkFirst has platform default sourceLevel.
+2022-08-07 19:34:46,389  WARN [Worker-9] - ScalaProject - Project SparkFirst runs on platform default installation.
+2022-08-07 19:35:05,929  WARN [Worker-9] - ScalaProject - Project SparkFirst has platform default sourceLevel.
+2022-08-07 19:35:05,929  WARN [Worker-9] - ScalaProject - Project SparkFirst runs on platform default installation.
+2022-08-07 19:35:19,278  WARN [main] - ScalaProject - Project SparkFirst has platform default sourceLevel.
+2022-08-07 19:35:19,278  WARN [main] - ScalaProject - Project SparkFirst runs on platform default installation.
+2022-08-07 19:39:11,216 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - An error occurred while trying to create a file.
+org.eclipse.core.internal.resources.ResourceException: Resource '/SparkFirst/src/main/scala/pack/obj.scala' already exists.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:314)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:301)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:181)
+	at org.scalaide.util.eclipse.FileUtils$.$anonfun$createFile$1(FileUtils.scala:112)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.util.Try$.apply(Try.scala:209)
+	at org.scalaide.util.eclipse.FileUtils$.createFile(FileUtils.scala:110)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:284)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.runEventLoop(EventLoopProgressMonitor.java:125)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.isCanceled(EventLoopProgressMonitor.java:99)
+	at org.eclipse.core.internal.jobs.ThreadJob.isCanceled(ThreadJob.java:144)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:250)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:334)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:434)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.openFileInSrcDir$1(NewFileWizard.scala:367)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.openEditor(NewFileWizard.scala:375)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:287)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.internal.actions.NewWizardShortcutAction.run(NewWizardShortcutAction.java:133)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+2022-08-07 19:45:26,053  WARN [main] - ScalaProject - Project SparkSecond has platform default sourceLevel.
+2022-08-07 19:45:26,054  WARN [main] - ScalaProject - Project SparkSecond runs on platform default installation.
+2022-08-07 19:45:26,216  WARN [main] - ScalaProject - Project SparkSecond has platform default sourceLevel.
+2022-08-07 19:45:26,216  WARN [main] - ScalaProject - Project SparkSecond runs on platform default installation.
+2022-08-07 19:45:26,402  WARN [Worker-13] - ScalaProject - Project SparkSecond has platform default sourceLevel.
+2022-08-07 19:45:26,402  WARN [Worker-13] - ScalaProject - Project SparkSecond runs on platform default installation.
+2022-08-07 19:45:27,147  WARN [Worker-13] - ScalaProject - Project SparkSecond has platform default sourceLevel.
+2022-08-07 19:45:27,147  WARN [Worker-13] - ScalaProject - Project SparkSecond runs on platform default installation.
+2022-08-07 19:46:39,722  WARN [main] - ScalaProject - Project SparkSecond has platform default sourceLevel.
+2022-08-07 19:46:39,722  WARN [main] - ScalaProject - Project SparkSecond runs on platform default installation.
+2022-08-07 19:51:38,562  WARN [main] - ScalaProject - Project SparkThird has platform default sourceLevel.
+2022-08-07 19:51:38,562  WARN [main] - ScalaProject - Project SparkThird runs on platform default installation.
+2022-08-07 19:51:38,707  WARN [main] - ScalaProject - Project SparkThird has platform default sourceLevel.
+2022-08-07 19:51:38,707  WARN [main] - ScalaProject - Project SparkThird runs on platform default installation.
+2022-08-07 19:51:38,889  WARN [Worker-12] - ScalaProject - Project SparkThird has platform default sourceLevel.
+2022-08-07 19:51:38,889  WARN [Worker-12] - ScalaProject - Project SparkThird runs on platform default installation.
+2022-08-07 19:51:39,663  WARN [Worker-12] - ScalaProject - Project SparkThird has platform default sourceLevel.
+2022-08-07 19:51:39,663  WARN [Worker-12] - ScalaProject - Project SparkThird runs on platform default installation.
+2022-08-07 19:51:48,321  WARN [main] - ScalaProject - Project SparkThird has platform default sourceLevel.
+2022-08-07 19:51:48,321  WARN [main] - ScalaProject - Project SparkThird runs on platform default installation.
+2022-08-07 19:55:11,895  WARN [main] - ScalaProject - Project SparkFourth has platform default sourceLevel.
+2022-08-07 19:55:11,895  WARN [main] - ScalaProject - Project SparkFourth runs on platform default installation.
+2022-08-07 19:55:12,059  WARN [main] - ScalaProject - Project SparkFourth has platform default sourceLevel.
+2022-08-07 19:55:12,059  WARN [main] - ScalaProject - Project SparkFourth runs on platform default installation.
+2022-08-07 19:55:12,204  WARN [Worker-13] - ScalaProject - Project SparkFourth has platform default sourceLevel.
+2022-08-07 19:55:12,204  WARN [Worker-13] - ScalaProject - Project SparkFourth runs on platform default installation.
+2022-08-07 19:55:13,011  WARN [Worker-13] - ScalaProject - Project SparkFourth has platform default sourceLevel.
+2022-08-07 19:55:13,011  WARN [Worker-13] - ScalaProject - Project SparkFourth runs on platform default installation.
+2022-08-07 19:55:37,742  WARN [main] - ScalaProject - Project SparkFourth has platform default sourceLevel.
+2022-08-07 19:55:37,742  WARN [main] - ScalaProject - Project SparkFourth runs on platform default installation.
+2022-08-07 19:58:20,777  WARN [main] - ScalaProject - Project SparkFive has platform default sourceLevel.
+2022-08-07 19:58:20,777  WARN [main] - ScalaProject - Project SparkFive runs on platform default installation.
+2022-08-07 19:58:20,960  WARN [main] - ScalaProject - Project SparkFive has platform default sourceLevel.
+2022-08-07 19:58:20,960  WARN [main] - ScalaProject - Project SparkFive runs on platform default installation.
+2022-08-07 19:58:21,125  WARN [Worker-0] - ScalaProject - Project SparkFive has platform default sourceLevel.
+2022-08-07 19:58:21,125  WARN [Worker-0] - ScalaProject - Project SparkFive runs on platform default installation.
+2022-08-07 19:58:21,883  WARN [Worker-0] - ScalaProject - Project SparkFive has platform default sourceLevel.
+2022-08-07 19:58:21,883  WARN [Worker-0] - ScalaProject - Project SparkFive runs on platform default installation.
+2022-08-07 19:58:35,534  WARN [main] - ScalaProject - Project SparkFive has platform default sourceLevel.
+2022-08-07 19:58:35,534  WARN [main] - ScalaProject - Project SparkFive runs on platform default installation.
+2022-08-13 15:54:52,163 ERROR [main] - Statistics - Statistics file `C:\Users\jetty\.scalaide\statistics` is corrupted. A new one is being created. Corrupted content was:
+
+com.cedarsoftware.util.io.JsonIoException: error parsing JSON value
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:529)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:289)
+	at com.cedarsoftware.util.io.JsonReader.jsonToJava(JsonReader.java:262)
+	at org.scalaide.core.internal.statistics.Statistics.read(Statistics.scala:74)
+	at org.scalaide.core.internal.statistics.Statistics.$anonfun$readStats$1(Statistics.scala:52)
+	at org.scalaide.core.internal.statistics.Statistics.$anonfun$readStats$1$adapted(Statistics.scala:51)
+	at org.scalaide.core.ScalaIdeDataStore$.$anonfun$validate$2(ScalaIdeDataStore.scala:59)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.core.ScalaIdeDataStore$.validate(ScalaIdeDataStore.scala:59)
+	at org.scalaide.core.internal.statistics.Statistics.readStats(Statistics.scala:51)
+	at org.scalaide.core.internal.statistics.Statistics.<init>(Statistics.scala:30)
+	at org.scalaide.core.internal.ScalaPlugin.stats$lzycompute(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.stats(ScalaPlugin.scala:135)
+	at org.scalaide.core.internal.ScalaPlugin.statistics(ScalaPlugin.scala:138)
+	at org.scalaide.core.internal.ScalaPlugin.start(ScalaPlugin.scala:109)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:779)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl$3.run(BundleContextImpl.java:1)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.startActivator(BundleContextImpl.java:772)
+	at org.eclipse.osgi.internal.framework.BundleContextImpl.start(BundleContextImpl.java:729)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.startWorker0(EquinoxBundle.java:933)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle$EquinoxModule.startWorker(EquinoxBundle.java:309)
+	at org.eclipse.osgi.container.Module.doStart(Module.java:581)
+	at org.eclipse.osgi.container.Module.start(Module.java:449)
+	at org.eclipse.osgi.framework.util.SecureAction.start(SecureAction.java:468)
+	at org.eclipse.osgi.internal.hooks.EclipseLazyStarter.postFindLocalClass(EclipseLazyStarter.java:103)
+	at org.eclipse.osgi.internal.loader.classpath.ClasspathManager.findLocalClass(ClasspathManager.java:529)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.findLocalClass(ModuleClassLoader.java:328)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findLocalClass(BundleLoader.java:368)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClassInternal(BundleLoader.java:446)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:395)
+	at org.eclipse.osgi.internal.loader.BundleLoader.findClass(BundleLoader.java:387)
+	at org.eclipse.osgi.internal.loader.ModuleClassLoader.loadClass(ModuleClassLoader.java:150)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at org.eclipse.osgi.internal.framework.EquinoxBundle.loadClass(EquinoxBundle.java:564)
+	at org.eclipse.core.internal.registry.osgi.RegistryStrategyOSGI.createExecutableExtension(RegistryStrategyOSGI.java:174)
+	at org.eclipse.core.internal.registry.ExtensionRegistry.createExecutableExtension(ExtensionRegistry.java:905)
+	at org.eclipse.core.internal.registry.ConfigurationElement.createExecutableExtension(ConfigurationElement.java:243)
+	at org.eclipse.core.internal.registry.ConfigurationElementHandle.createExecutableExtension(ConfigurationElementHandle.java:55)
+	at org.eclipse.jdt.internal.ui.filters.FilterDescriptor$1.run(FilterDescriptor.java:135)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.jdt.internal.ui.filters.FilterDescriptor.createViewerFilter(FilterDescriptor.java:139)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup$FilterItem.getFilterInstance(CustomFiltersActionGroup.java:187)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup.updateViewerFilters(CustomFiltersActionGroup.java:517)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup.<init>(CustomFiltersActionGroup.java:275)
+	at org.eclipse.jdt.ui.actions.CustomFiltersActionGroup.<init>(CustomFiltersActionGroup.java:241)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.<init>(PackageExplorerActionGroup.java:149)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart.makeActions(PackageExplorerPart.java:800)
+	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart.createPartControl(PackageExplorerPart.java:506)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.createPartControl(CompatibilityPart.java:151)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityView.createPartControl(CompatibilityView.java:147)
+	at org.eclipse.ui.internal.e4.compatibility.CompatibilityPart.create(CompatibilityPart.java:355)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.e4.core.internal.di.MethodRequestor.execute(MethodRequestor.java:55)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:990)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.processAnnotated(InjectorImpl.java:955)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.inject(InjectorImpl.java:124)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.internalMake(InjectorImpl.java:399)
+	at org.eclipse.e4.core.internal.di.InjectorImpl.make(InjectorImpl.java:318)
+	at org.eclipse.e4.core.contexts.ContextInjectionFactory.make(ContextInjectionFactory.java:162)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.createFromBundle(ReflectionContributionFactory.java:105)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.doCreate(ReflectionContributionFactory.java:74)
+	at org.eclipse.e4.ui.internal.workbench.ReflectionContributionFactory.create(ReflectionContributionFactory.java:56)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ContributedPartRenderer.createWidget(ContributedPartRenderer.java:129)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:546)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:530)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:70)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:992)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:661)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1293)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:49)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:79)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:97)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:61)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:679)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:137)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:69)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:704)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:675)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:767)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.access$0(PartRenderingEngine.java:738)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:732)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:716)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1076)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+Caused by: com.cedarsoftware.util.io.JsonIoException: EOF reached prematurely
+	at com.cedarsoftware.util.io.JsonParser.error(JsonParser.java:584)
+	at com.cedarsoftware.util.io.JsonParser.readValue(JsonParser.java:278)
+	at com.cedarsoftware.util.io.JsonReader.readObject(JsonReader.java:521)
+	... 151 more
+2022-08-13 18:07:07,183 ERROR [Worker-76] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-08-13 18:07:07,185 ERROR [Worker-76] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-08-13 18:07:11,185 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - An error occurred while trying to create a file.
+org.eclipse.core.internal.resources.ResourceException: Resource '/SparkFirst/src/main/scala/pack/Firstpgm.scala' already exists.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:314)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:301)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:181)
+	at org.scalaide.util.eclipse.FileUtils$.$anonfun$createFile$1(FileUtils.scala:112)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.util.Try$.apply(Try.scala:209)
+	at org.scalaide.util.eclipse.FileUtils$.createFile(FileUtils.scala:110)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:284)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.runEventLoop(EventLoopProgressMonitor.java:125)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.isCanceled(EventLoopProgressMonitor.java:99)
+	at org.eclipse.core.internal.jobs.ThreadJob.isCanceled(ThreadJob.java:144)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:250)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:334)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:434)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.openFileInSrcDir$1(NewFileWizard.scala:367)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.openEditor(NewFileWizard.scala:375)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:287)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.internal.actions.NewWizardShortcutAction.run(NewWizardShortcutAction.java:133)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+2022-08-14 16:07:45,116 ERROR [Worker-0] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-08-14 16:07:45,122 ERROR [Worker-0] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-08-14 19:03:49,657 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-08-14 19:03:49,666 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-08-14 19:03:49,666 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-08-14 19:03:49,666 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-08-20 16:05:55,424 ERROR [Worker-0] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-08-20 16:05:55,427 ERROR [Worker-0] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-08-20 18:26:51,336 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Throwable during asyncExec
+java.util.NoSuchElementException: key not found: C:\Users\jetty\workspace\SparkFirst\src\main\scala\pack\Task.scala
+	at scala.collection.MapLike.default(MapLike.scala:232)
+	at scala.collection.MapLike.default$(MapLike.scala:231)
+	at scala.collection.AbstractMap.default(Map.scala:59)
+	at scala.collection.MapLike.apply(MapLike.scala:141)
+	at scala.collection.MapLike.apply$(MapLike.scala:140)
+	at scala.collection.AbstractMap.apply(Map.scala:59)
+	at scala.tools.nsc.interactive.Global.$anonfun$withTempUnits$1(Global.scala:839)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$3(Global.scala:938)
+	at scala.tools.nsc.interactive.Global.$anonfun$getDocComment$2(Global.scala:842)
+	at scala.tools.nsc.interactive.Global.$anonfun$respond$1(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.respondGradually(Global.scala:695)
+	at scala.tools.nsc.interactive.Global.respond(Global.scala:688)
+	at scala.tools.nsc.interactive.Global.getDocComment(Global.scala:933)
+	at scala.tools.nsc.interactive.CompilerControl$AskDocCommentItem.apply$mcV$sp(CompilerControl.scala:383)
+	at scala.tools.nsc.interactive.Global.$anonfun$pollForWork$1(Global.scala:493)
+	at scala.tools.nsc.interactive.Global.pollForWork(Global.scala:418)
+	at scala.tools.nsc.interactive.PresentationCompilerThread.run(PresentationCompilerThread.scala:22)
+2022-08-20 18:53:26,338  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ImplicitHighlightingPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2022-08-21 15:54:22,107 ERROR [Worker-2] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-08-21 15:54:22,110 ERROR [Worker-2] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-08-21 17:06:06,370  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:06,372  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:06,884  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:06,886  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:07,400  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:07,401  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:08,411  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:08,412  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:17,095  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:18,167  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:18,680  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:19,193  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:20,206  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:30,518  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:34,085  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:34,595  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:36,157  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:37,214  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:06:38,274  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 69
+2022-08-21 17:53:02,731 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-08-21 18:53:17,590 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-08-21 18:53:17,591 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-08-21 18:53:17,591 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-08-27 16:26:02,296 ERROR [Worker-1] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-08-27 16:26:02,301 ERROR [Worker-1] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-08-27 16:26:03,042  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2022-08-28 15:58:55,999 ERROR [Worker-3] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-08-28 15:58:56,003 ERROR [Worker-3] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-08-28 19:01:43,773 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-08-28 19:01:43,773 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-08-28 19:01:43,774 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-03 15:57:59,174 ERROR [Worker-7] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-09-03 15:57:59,178 ERROR [Worker-7] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-09-04 15:55:04,510 ERROR [Worker-7] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-09-04 15:55:04,514 ERROR [Worker-7] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-09-10 15:49:30,854 ERROR [Worker-1] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-09-10 15:49:30,859 ERROR [Worker-1] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-09-10 15:53:33,397 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-10 15:53:33,404 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-10 15:53:33,404 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-10 15:53:33,404 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-10 18:44:19,675  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1324
+2022-09-11 15:49:55,493 ERROR [Worker-2] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-09-11 15:49:55,497 ERROR [Worker-2] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-09-11 19:01:46,945 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,946 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,946 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,946 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,946 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,946 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,946 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,947 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,947 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,947 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,947 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,947 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,947 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:01:46,948 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,518 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,520 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,520 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,521 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,522 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,522 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,522 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,522 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,522 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,522 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,522 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,523 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,523 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:03:38,523 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:07:08,006 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 19:07:08,008 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 20:16:26,872 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 20:16:26,872 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 20:26:32,799 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 20:26:32,800 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-11 20:26:32,800 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-17 15:58:43,129 ERROR [Worker-7] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-09-17 15:58:43,140 ERROR [Worker-7] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-09-17 15:58:50,912 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - An error occurred while trying to create a file.
+org.eclipse.core.internal.resources.ResourceException: Resource '/SparkFirst/src/main/scala/pack/Day32.scala' already exists.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:314)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:301)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:181)
+	at org.scalaide.util.eclipse.FileUtils$.$anonfun$createFile$1(FileUtils.scala:112)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.util.Try$.apply(Try.scala:209)
+	at org.scalaide.util.eclipse.FileUtils$.createFile(FileUtils.scala:110)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:284)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.runEventLoop(EventLoopProgressMonitor.java:125)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.isCanceled(EventLoopProgressMonitor.java:99)
+	at org.eclipse.core.internal.jobs.ThreadJob.isCanceled(ThreadJob.java:144)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:250)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.File.create(File.java:106)
+	at org.eclipse.core.internal.resources.File.create(File.java:181)
+	at org.scalaide.util.eclipse.FileUtils$.$anonfun$createFile$1(FileUtils.scala:112)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.util.Try$.apply(Try.scala:209)
+	at org.scalaide.util.eclipse.FileUtils$.createFile(FileUtils.scala:110)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:284)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.runEventLoop(EventLoopProgressMonitor.java:125)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.isCanceled(EventLoopProgressMonitor.java:99)
+	at org.eclipse.core.internal.jobs.ThreadJob.isCanceled(ThreadJob.java:144)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:250)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:334)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:434)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.openFileInSrcDir$1(NewFileWizard.scala:367)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.openEditor(NewFileWizard.scala:375)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:287)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.internal.actions.NewWizardShortcutAction.run(NewWizardShortcutAction.java:133)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+2022-09-17 15:58:50,923 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - An error occurred while trying to create a file.
+org.eclipse.core.internal.resources.ResourceException: Resource '/SparkFirst/src/main/scala/pack/Day32.scala' already exists.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:314)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:301)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:181)
+	at org.scalaide.util.eclipse.FileUtils$.$anonfun$createFile$1(FileUtils.scala:112)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.util.Try$.apply(Try.scala:209)
+	at org.scalaide.util.eclipse.FileUtils$.createFile(FileUtils.scala:110)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:284)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.runEventLoop(EventLoopProgressMonitor.java:125)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.isCanceled(EventLoopProgressMonitor.java:99)
+	at org.eclipse.core.internal.jobs.ThreadJob.isCanceled(ThreadJob.java:144)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:250)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:334)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:434)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.openFileInSrcDir$1(NewFileWizard.scala:367)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.openEditor(NewFileWizard.scala:375)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:287)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.internal.actions.NewWizardShortcutAction.run(NewWizardShortcutAction.java:133)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+2022-09-17 16:03:15,453 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-17 16:03:15,493 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-17 16:03:15,493 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-18 10:10:11,984 ERROR [Worker-10] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-09-18 10:10:11,989 ERROR [Worker-10] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-09-18 10:13:10,789 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-18 10:13:10,790 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-18 10:13:10,790 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-18 10:15:10,047 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-18 10:15:10,049 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-18 10:15:10,049 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-18 15:58:26,603 ERROR [Worker-2] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-09-18 15:58:26,607 ERROR [Worker-2] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-09-18 15:58:28,001  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CustomSemanticAction - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2022-09-18 15:58:28,204  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2022-09-24 15:50:22,009 ERROR [Worker-3] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-09-24 15:50:22,015 ERROR [Worker-3] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-09-24 18:59:52,413 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-24 18:59:52,413 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-24 18:59:52,414 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 17:27:35,022 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 17:27:35,050 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 17:34:33,412 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 17:43:12,283  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1805
+2022-09-25 17:43:24,325  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1805
+2022-09-25 17:43:27,914  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1804
+2022-09-25 17:43:29,944  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1805
+2022-09-25 17:43:30,452  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 1805
+2022-09-25 17:43:31,481  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - TraverserImpl$ - Skipping annotation, position length = 0, position offset = 653
+2022-09-25 18:31:01,418 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 18:31:01,426 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 18:31:01,426 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 18:31:01,427 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 18:34:50,806 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 18:34:50,817 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 18:34:50,818 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 18:34:50,818 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 19:44:03,194 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 19:44:03,196 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-09-25 19:44:03,197 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-01 15:53:04,943 ERROR [Worker-7] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-10-01 15:53:04,948 ERROR [Worker-7] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-10-01 15:53:05,298  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2022-10-02 08:42:19,472  WARN [ModalContext] - ScalaProject - Project SparkFourth has platform default sourceLevel.
+2022-10-02 08:42:19,472  WARN [ModalContext] - ScalaProject - Project SparkFourth runs on platform default installation.
+2022-10-02 08:42:19,818  WARN [ModalContext] - ScalaProject - Project SparkFourth has platform default sourceLevel.
+2022-10-02 08:42:19,865  WARN [ModalContext] - ScalaProject - Project SparkFourth runs on platform default installation.
+2022-10-02 08:42:29,003  WARN [ModalContext] - ScalaProject - Project SparkSecond has platform default sourceLevel.
+2022-10-02 08:42:29,003  WARN [ModalContext] - ScalaProject - Project SparkSecond runs on platform default installation.
+2022-10-02 08:42:29,460  WARN [ModalContext] - ScalaProject - Project SparkSecond has platform default sourceLevel.
+2022-10-02 08:42:29,460  WARN [ModalContext] - ScalaProject - Project SparkSecond runs on platform default installation.
+2022-10-02 08:49:58,138  WARN [main] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:49:58,138  WARN [main] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:49:58,481  WARN [main] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:49:58,481  WARN [main] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:49:58,671  WARN [Worker-61] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:49:58,671  WARN [Worker-61] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:50:01,653  WARN [Worker-61] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:50:01,654  WARN [Worker-61] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:52:04,020  WARN [Worker-71] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:52:04,020  WARN [Worker-71] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:53:32,680  WARN [ModalContext] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:53:32,680  WARN [ModalContext] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:54:15,280  WARN [main] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:54:15,281  WARN [main] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:55:19,986  WARN [main] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:55:19,986  WARN [main] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:55:20,192  WARN [main] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:55:20,192  WARN [main] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:55:20,348  WARN [Worker-63] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:55:20,349  WARN [Worker-63] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:55:21,145  WARN [Worker-63] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:55:21,145  WARN [Worker-63] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 08:55:33,102  WARN [main] - ScalaProject - Project SparkProject has platform default sourceLevel.
+2022-10-02 08:55:33,102  WARN [main] - ScalaProject - Project SparkProject runs on platform default installation.
+2022-10-02 09:00:14,251 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-02 09:00:14,251 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-02 09:00:14,251 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-02 09:43:32,564 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-02 09:43:32,566 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-02 09:43:32,566 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-02 10:20:50,421 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-02 10:20:50,421 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-02 10:20:50,421 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-02 15:54:33,465 ERROR [Worker-5] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-10-02 15:54:33,469 ERROR [Worker-5] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-10-03 14:27:18,349 ERROR [Worker-15] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-10-03 14:27:18,354 ERROR [Worker-15] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-10-05 21:00:33,124 ERROR [Worker-6] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-10-05 21:00:33,127 ERROR [Worker-6] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-10-15 15:58:46,685 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-15 15:58:46,691 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-15 15:58:46,693 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-15 15:59:23,343 ERROR [Worker-11] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-10-15 15:59:23,344 ERROR [Worker-11] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-10-28 13:11:25,411 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-28 13:11:25,450 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-28 13:11:25,451 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-10-28 13:11:25,452 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-11-12 09:43:56,710  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2022-12-18 19:17:09,370 ERROR [Worker-12] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-12-18 19:17:09,375 ERROR [Worker-12] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-12-18 21:22:05,501 ERROR [Worker-4] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-12-18 21:22:05,507 ERROR [Worker-4] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-12-18 21:35:37,575  WARN [ModalContext] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 21:35:37,576  WARN [ModalContext] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 21:35:41,050  WARN [Worker-9] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 21:35:41,050  WARN [Worker-9] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 21:51:26,093  WARN [main] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 21:51:26,093  WARN [main] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 21:51:26,227  WARN [main] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 21:51:26,227  WARN [main] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 21:51:26,361  WARN [Worker-12] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 21:51:26,361  WARN [Worker-12] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 21:51:26,729  WARN [Worker-12] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 21:51:26,729  WARN [Worker-12] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 21:53:30,529  WARN [main] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 21:53:30,529  WARN [main] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 22:02:03,937  WARN [ModalContext] - ScalaProject - Project SparkFirst has platform default sourceLevel.
+2022-12-18 22:02:03,937  WARN [ModalContext] - ScalaProject - Project SparkFirst runs on platform default installation.
+2022-12-18 22:02:04,186  WARN [ModalContext] - ScalaProject - Project SparkFirst has platform default sourceLevel.
+2022-12-18 22:02:04,187  WARN [ModalContext] - ScalaProject - Project SparkFirst runs on platform default installation.
+2022-12-18 22:07:29,082  WARN [ModalContext] - ScalaProject - Project Practise has platform default sourceLevel.
+2022-12-18 22:07:29,082  WARN [ModalContext] - ScalaProject - Project Practise runs on platform default installation.
+2022-12-18 22:07:29,283  WARN [ModalContext] - ScalaProject - Project Practise has platform default sourceLevel.
+2022-12-18 22:07:29,283  WARN [ModalContext] - ScalaProject - Project Practise runs on platform default installation.
+2022-12-18 22:10:13,006  WARN [ModalContext] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 22:10:13,006  WARN [ModalContext] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 22:10:13,205  WARN [ModalContext] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 22:10:13,205  WARN [ModalContext] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 22:10:14,194  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 22:10:14,195  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 22:10:14,196  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 22:10:14,196  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 22:10:14,198  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 22:10:14,198  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 22:10:14,198  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 22:10:14,198  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 22:10:14,199  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project prac has platform default sourceLevel.
+2022-12-18 22:10:14,199  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project prac runs on platform default installation.
+2022-12-18 22:10:14,324 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error thrown while initializing the presentation compiler.
+Java Model Exception: Java Model Status [prac does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2451)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:1903)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:1925)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths(ClasspathManagement.scala:149)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths$(ClasspathManagement.scala:148)
+	at org.scalaide.core.internal.project.ScalaProject.jdkPaths(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath(ClasspathManagement.scala:136)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath$(ClasspathManagement.scala:135)
+	at org.scalaide.core.internal.project.ScalaProject.scalaClasspath(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ScalaProject.setupCompilerClasspath(ScalaProject.scala:498)
+	at org.scalaide.core.internal.project.ScalaProject.initializeCompilerSettings(ScalaProject.scala:485)
+	at org.scalaide.core.internal.project.ScalaProject.prepareCompilerSettings(ScalaProject.scala:438)
+	at org.scalaide.core.internal.project.ScalaProject.$anonfun$presentationCompiler$1(ScalaProject.scala:162)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.liftedTree1$1(PresentationCompilerProxy.scala:154)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.create(PresentationCompilerProxy.scala:153)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.initialize(PresentationCompilerProxy.scala:118)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.obtainPc$1(PresentationCompilerProxy.scala:80)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.forceReconcile(InteractiveCompilationUnit.scala:150)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.forceReconcile$(InteractiveCompilationUnit.scala:149)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.forceReconcile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:54)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2022-12-18 22:10:14,327 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error thrown while initializing the presentation compiler.
+Java Model Exception: Java Model Status [prac does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2451)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:1903)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:1925)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths(ClasspathManagement.scala:149)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths$(ClasspathManagement.scala:148)
+	at org.scalaide.core.internal.project.ScalaProject.jdkPaths(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath(ClasspathManagement.scala:136)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath$(ClasspathManagement.scala:135)
+	at org.scalaide.core.internal.project.ScalaProject.scalaClasspath(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ScalaProject.setupCompilerClasspath(ScalaProject.scala:498)
+	at org.scalaide.core.internal.project.ScalaProject.initializeCompilerSettings(ScalaProject.scala:485)
+	at org.scalaide.core.internal.project.ScalaProject.prepareCompilerSettings(ScalaProject.scala:438)
+	at org.scalaide.core.internal.project.ScalaProject.$anonfun$presentationCompiler$1(ScalaProject.scala:162)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.liftedTree1$1(PresentationCompilerProxy.scala:154)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.create(PresentationCompilerProxy.scala:153)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.initialize(PresentationCompilerProxy.scala:118)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.obtainPc$1(PresentationCompilerProxy.scala:80)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.currentProblems(InteractiveCompilationUnit.scala:183)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.currentProblems$(InteractiveCompilationUnit.scala:180)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.currentProblems(ScalaSourceFile.scala:71)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.forceReconcile(InteractiveCompilationUnit.scala:151)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.forceReconcile$(InteractiveCompilationUnit.scala:149)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.forceReconcile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:54)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2022-12-18 22:10:14,329 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error thrown while initializing the presentation compiler.
+Java Model Exception: Java Model Status [prac does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2451)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:1903)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:1925)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths(ClasspathManagement.scala:149)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths$(ClasspathManagement.scala:148)
+	at org.scalaide.core.internal.project.ScalaProject.jdkPaths(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath(ClasspathManagement.scala:136)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath$(ClasspathManagement.scala:135)
+	at org.scalaide.core.internal.project.ScalaProject.scalaClasspath(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ScalaProject.setupCompilerClasspath(ScalaProject.scala:498)
+	at org.scalaide.core.internal.project.ScalaProject.initializeCompilerSettings(ScalaProject.scala:485)
+	at org.scalaide.core.internal.project.ScalaProject.prepareCompilerSettings(ScalaProject.scala:438)
+	at org.scalaide.core.internal.project.ScalaProject.$anonfun$presentationCompiler$1(ScalaProject.scala:162)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.liftedTree1$1(PresentationCompilerProxy.scala:154)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.create(PresentationCompilerProxy.scala:153)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.initialize(PresentationCompilerProxy.scala:118)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.obtainPc$1(PresentationCompilerProxy.scala:80)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.apply(BaseSemanticAction.scala:139)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$3(ScalaSourceFileEditor.scala:105)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$1(ScalaSourceFileEditor.scala:105)
+	at scala.collection.mutable.ArraySeq.foreach(ArraySeq.scala:74)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.reconciled(ScalaSourceFileEditor.scala:103)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5$adapted(ScalaSourceFileEditor.scala:478)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.reconciled(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.reconciled(ScalaSourceFileEditor.scala:379)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2$adapted(ScalaReconcilingStrategy.scala:65)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2022-12-18 22:10:14,331 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error thrown while initializing the presentation compiler.
+Java Model Exception: Java Model Status [prac does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2451)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:1903)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:1925)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths(ClasspathManagement.scala:149)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths$(ClasspathManagement.scala:148)
+	at org.scalaide.core.internal.project.ScalaProject.jdkPaths(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath(ClasspathManagement.scala:136)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath$(ClasspathManagement.scala:135)
+	at org.scalaide.core.internal.project.ScalaProject.scalaClasspath(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ScalaProject.setupCompilerClasspath(ScalaProject.scala:498)
+	at org.scalaide.core.internal.project.ScalaProject.initializeCompilerSettings(ScalaProject.scala:485)
+	at org.scalaide.core.internal.project.ScalaProject.prepareCompilerSettings(ScalaProject.scala:438)
+	at org.scalaide.core.internal.project.ScalaProject.$anonfun$presentationCompiler$1(ScalaProject.scala:162)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.liftedTree1$1(PresentationCompilerProxy.scala:154)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.create(PresentationCompilerProxy.scala:153)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.initialize(PresentationCompilerProxy.scala:118)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.obtainPc$1(PresentationCompilerProxy.scala:80)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.apply(BaseSemanticAction.scala:139)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$3(ScalaSourceFileEditor.scala:105)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$1(ScalaSourceFileEditor.scala:105)
+	at scala.collection.mutable.ArraySeq.foreach(ArraySeq.scala:74)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.reconciled(ScalaSourceFileEditor.scala:103)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5$adapted(ScalaSourceFileEditor.scala:478)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.reconciled(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.reconciled(ScalaSourceFileEditor.scala:379)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2$adapted(ScalaReconcilingStrategy.scala:65)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2022-12-18 22:10:14,334 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error thrown while initializing the presentation compiler.
+Java Model Exception: Java Model Status [prac does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2451)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:1903)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:1925)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths(ClasspathManagement.scala:149)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths$(ClasspathManagement.scala:148)
+	at org.scalaide.core.internal.project.ScalaProject.jdkPaths(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath(ClasspathManagement.scala:136)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath$(ClasspathManagement.scala:135)
+	at org.scalaide.core.internal.project.ScalaProject.scalaClasspath(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ScalaProject.setupCompilerClasspath(ScalaProject.scala:498)
+	at org.scalaide.core.internal.project.ScalaProject.initializeCompilerSettings(ScalaProject.scala:485)
+	at org.scalaide.core.internal.project.ScalaProject.prepareCompilerSettings(ScalaProject.scala:438)
+	at org.scalaide.core.internal.project.ScalaProject.$anonfun$presentationCompiler$1(ScalaProject.scala:162)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.liftedTree1$1(PresentationCompilerProxy.scala:154)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.create(PresentationCompilerProxy.scala:153)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.initialize(PresentationCompilerProxy.scala:118)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.obtainPc$1(PresentationCompilerProxy.scala:80)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.apply(BaseSemanticAction.scala:139)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$3(ScalaSourceFileEditor.scala:105)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$1(ScalaSourceFileEditor.scala:105)
+	at scala.collection.mutable.ArraySeq.foreach(ArraySeq.scala:74)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.reconciled(ScalaSourceFileEditor.scala:103)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5$adapted(ScalaSourceFileEditor.scala:478)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.reconciled(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.reconciled(ScalaSourceFileEditor.scala:379)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2$adapted(ScalaReconcilingStrategy.scala:65)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2022-12-18 22:11:29,009  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:11:29,009  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:11:29,093  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:11:29,093  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:11:29,222  WARN [Worker-1] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:11:29,222  WARN [Worker-1] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:11:29,616  WARN [Worker-1] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:11:29,616  WARN [Worker-1] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:11:56,928  WARN [ModalContext] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:11:56,928  WARN [ModalContext] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:11:57,111  WARN [Worker-5] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:11:57,111  WARN [Worker-5] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:11:57,438  WARN [Worker-5] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:11:57,438  WARN [Worker-5] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:12:07,934  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:12:07,934  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:12:15,243  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:12:15,243  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:12:15,361  WARN [Worker-5] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:12:15,362  WARN [Worker-5] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:12:15,757  WARN [Worker-5] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:12:15,757  WARN [Worker-5] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:12:54,565  WARN [Worker-7] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:12:54,565  WARN [Worker-7] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:12:54,897  WARN [Worker-7] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:12:54,897  WARN [Worker-7] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:13:01,352  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:13:01,352  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:13:02,308  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:13:02,309  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:13:02,464  WARN [Worker-2] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:13:02,464  WARN [Worker-2] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:13:03,319  WARN [Worker-2] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:13:03,320  WARN [Worker-2] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:15:57,703  WARN [Worker-1] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:15:57,704  WARN [Worker-1] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:15:57,889  WARN [Worker-14] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:15:57,889  WARN [Worker-14] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:15:58,168  WARN [Text Viewer Hover Presenter] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:15:58,168  WARN [Text Viewer Hover Presenter] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:15:59,415  WARN [Worker-14] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:15:59,415  WARN [Worker-14] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:16:01,751  WARN [Worker-7] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:16:01,751  WARN [Worker-7] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:16:03,904  WARN [Worker-7] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:16:03,904  WARN [Worker-7] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:16:12,204  WARN [Worker-1] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:16:12,204  WARN [Worker-1] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:16:14,133  WARN [Worker-1] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:16:14,133  WARN [Worker-1] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:41:36,584  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:41:36,587  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:41:36,594  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:41:36,594  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:41:44,501 ERROR [Worker-9] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-12-18 22:41:44,502 ERROR [Worker-9] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-12-18 22:41:44,698  WARN [Java indexing] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:41:44,700  WARN [Java indexing] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:41:47,573  WARN [Worker-9] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:41:47,573  WARN [Worker-9] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:41:47,655  WARN [Worker-9] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:41:47,655  WARN [Worker-9] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:42:11,596  WARN [Worker-0] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:42:11,597  WARN [Worker-0] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-18 22:48:36,026  WARN [Worker-7] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-18 22:48:36,026  WARN [Worker-7] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-21 19:53:45,031  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-21 19:53:45,034  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-21 19:53:45,064  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-21 19:53:45,065  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-21 20:09:37,162 ERROR [Worker-10] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-12-21 20:09:37,164 ERROR [Worker-10] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-12-21 20:09:40,833  WARN [Worker-10] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-21 20:09:40,834  WARN [Worker-10] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-21 20:09:40,929  WARN [Worker-10] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-21 20:09:40,929  WARN [Worker-10] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-21 20:11:29,450  WARN [Worker-6] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-21 20:11:29,451  WARN [Worker-6] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-21 20:12:07,660  WARN [Worker-1] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-21 20:12:07,660  WARN [Worker-1] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-21 20:12:08,012  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-21 20:12:08,012  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-21 20:12:12,807  WARN [Worker-3] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-21 20:12:12,807  WARN [Worker-3] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-21 20:12:13,418 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - An error occurred while trying to create a file.
+org.eclipse.core.internal.resources.ResourceException: Resource '/Prac1/src/main/scala/pac/apijson.scala' already exists.
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:314)
+	at org.eclipse.core.internal.resources.Resource.checkDoesNotExist(Resource.java:301)
+	at org.eclipse.core.internal.resources.File.create(File.java:107)
+	at org.eclipse.core.internal.resources.File.create(File.java:181)
+	at org.scalaide.util.eclipse.FileUtils$.$anonfun$createFile$1(FileUtils.scala:112)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at scala.util.Try$.apply(Try.scala:209)
+	at org.scalaide.util.eclipse.FileUtils$.createFile(FileUtils.scala:110)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:284)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.runEventLoop(EventLoopProgressMonitor.java:125)
+	at org.eclipse.ui.internal.dialogs.EventLoopProgressMonitor.isCanceled(EventLoopProgressMonitor.java:99)
+	at org.eclipse.core.internal.jobs.ThreadJob.isCanceled(ThreadJob.java:144)
+	at org.eclipse.core.internal.jobs.ThreadJob.waitForRun(ThreadJob.java:250)
+	at org.eclipse.core.internal.jobs.ThreadJob.joinRun(ThreadJob.java:199)
+	at org.eclipse.core.internal.jobs.ImplicitJobs.begin(ImplicitJobs.java:92)
+	at org.eclipse.core.internal.jobs.JobManager.beginRule(JobManager.java:308)
+	at org.eclipse.core.internal.resources.WorkManager.checkIn(WorkManager.java:121)
+	at org.eclipse.core.internal.resources.Workspace.prepareOperation(Workspace.java:2188)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:334)
+	at org.eclipse.core.internal.resources.File.setContents(File.java:434)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.openFileInSrcDir$1(NewFileWizard.scala:367)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.openEditor(NewFileWizard.scala:375)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13(NewFileWizard.scala:287)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.$anonfun$okPressed$13$adapted(NewFileWizard.scala:283)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed(NewFileWizard.scala:283)
+	at org.scalaide.ui.internal.wizards.NewFileWizard.okPressed$(NewFileWizard.scala:230)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter$$anon$1.okPressed(NewFileWizardAdapter.scala:28)
+	at org.scalaide.ui.internal.wizards.NewFileWizardAdapter.performFinish(NewFileWizardAdapter.scala:55)
+	at org.eclipse.jface.wizard.WizardDialog.finishPressed(WizardDialog.java:778)
+	at org.eclipse.jface.wizard.WizardDialog.buttonPressed(WizardDialog.java:417)
+	at org.eclipse.jface.dialogs.Dialog.lambda$0(Dialog.java:619)
+	at org.eclipse.swt.events.SelectionListener$1.widgetSelected(SelectionListener.java:81)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:249)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.jface.window.Window.runEventLoop(Window.java:818)
+	at org.eclipse.jface.window.Window.open(Window.java:794)
+	at org.eclipse.ui.internal.actions.NewWizardShortcutAction.run(NewWizardShortcutAction.java:133)
+	at org.eclipse.jface.action.Action.runWithEvent(Action.java:473)
+	at org.eclipse.jface.action.ActionContributionItem.handleWidgetSelection(ActionContributionItem.java:565)
+	at org.eclipse.jface.action.ActionContributionItem.lambda$4(ActionContributionItem.java:397)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:86)
+	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4428)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1079)
+	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4238)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3817)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1150)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1039)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:153)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:680)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:336)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:594)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:148)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:151)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:388)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:243)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1499)
+2022-12-21 20:12:46,661  WARN [Worker-1] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-21 20:12:46,661  WARN [Worker-1] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-21 20:19:42,615  WARN [Worker-6] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-21 20:19:42,615  WARN [Worker-6] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-22 18:47:05,217  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-22 18:47:05,221  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-22 18:47:05,233  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-22 18:47:05,233  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-22 18:48:22,940 ERROR [Worker-6] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-12-22 18:48:22,941 ERROR [Worker-6] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-12-22 18:48:26,445  WARN [Worker-6] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-22 18:48:26,446  WARN [Worker-6] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-22 18:48:26,557  WARN [Worker-6] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-22 18:48:26,558  WARN [Worker-6] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-22 18:48:55,324 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-12-22 18:48:55,325 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-12-22 18:48:55,327 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-12-22 18:50:13,160  WARN [main] - ScalaProject - Project Prac1 has platform default sourceLevel.
+2022-12-22 18:50:13,160  WARN [main] - ScalaProject - Project Prac1 runs on platform default installation.
+2022-12-22 18:52:29,004  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:52:29,004  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:52:29,359  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:52:29,360  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:52:29,601  WARN [Worker-7] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:52:29,601  WARN [Worker-7] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:52:30,397  WARN [Worker-7] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:52:30,397  WARN [Worker-7] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:52:42,238  WARN [ModalContext] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:52:42,238  WARN [ModalContext] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:52:42,426  WARN [Worker-0] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:52:42,426  WARN [Worker-0] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:52:43,180  WARN [Worker-0] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:52:43,180  WARN [Worker-0] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:54:25,492  WARN [Worker-10] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:54:25,492  WARN [Worker-10] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:54:26,251  WARN [Worker-10] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:54:26,252  WARN [Worker-10] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:54:33,675  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:54:33,675  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:54:36,864  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:54:36,865  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:54:37,004  WARN [Worker-10] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:54:37,004  WARN [Worker-10] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:54:39,580  WARN [Worker-10] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:54:39,580  WARN [Worker-10] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:56:45,172  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:56:45,173  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:56:45,176  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:56:45,176  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:56:45,181  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:56:45,181  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:56:45,183  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:56:45,183  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:56:45,185  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:56:45,186  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:56:46,164 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error thrown while initializing the presentation compiler.
+Java Model Exception: Java Model Status [PractiseSpark does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2451)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:1903)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:1925)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths(ClasspathManagement.scala:149)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths$(ClasspathManagement.scala:148)
+	at org.scalaide.core.internal.project.ScalaProject.jdkPaths(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath(ClasspathManagement.scala:136)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath$(ClasspathManagement.scala:135)
+	at org.scalaide.core.internal.project.ScalaProject.scalaClasspath(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ScalaProject.setupCompilerClasspath(ScalaProject.scala:498)
+	at org.scalaide.core.internal.project.ScalaProject.initializeCompilerSettings(ScalaProject.scala:485)
+	at org.scalaide.core.internal.project.ScalaProject.prepareCompilerSettings(ScalaProject.scala:438)
+	at org.scalaide.core.internal.project.ScalaProject.$anonfun$presentationCompiler$1(ScalaProject.scala:162)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.liftedTree1$1(PresentationCompilerProxy.scala:154)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.create(PresentationCompilerProxy.scala:153)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.initialize(PresentationCompilerProxy.scala:118)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.obtainPc$1(PresentationCompilerProxy.scala:80)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.forceReconcile(InteractiveCompilationUnit.scala:150)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.forceReconcile$(InteractiveCompilationUnit.scala:149)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.forceReconcile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:54)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2022-12-22 18:56:46,169 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error thrown while initializing the presentation compiler.
+Java Model Exception: Java Model Status [PractiseSpark does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2451)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:1903)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:1925)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths(ClasspathManagement.scala:149)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths$(ClasspathManagement.scala:148)
+	at org.scalaide.core.internal.project.ScalaProject.jdkPaths(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath(ClasspathManagement.scala:136)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath$(ClasspathManagement.scala:135)
+	at org.scalaide.core.internal.project.ScalaProject.scalaClasspath(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ScalaProject.setupCompilerClasspath(ScalaProject.scala:498)
+	at org.scalaide.core.internal.project.ScalaProject.initializeCompilerSettings(ScalaProject.scala:485)
+	at org.scalaide.core.internal.project.ScalaProject.prepareCompilerSettings(ScalaProject.scala:438)
+	at org.scalaide.core.internal.project.ScalaProject.$anonfun$presentationCompiler$1(ScalaProject.scala:162)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.liftedTree1$1(PresentationCompilerProxy.scala:154)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.create(PresentationCompilerProxy.scala:153)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.initialize(PresentationCompilerProxy.scala:118)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.obtainPc$1(PresentationCompilerProxy.scala:80)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.apply(PresentationCompilerProxy.scala:58)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.currentProblems(InteractiveCompilationUnit.scala:183)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.currentProblems$(InteractiveCompilationUnit.scala:180)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.currentProblems(ScalaSourceFile.scala:71)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.forceReconcile(InteractiveCompilationUnit.scala:151)
+	at org.scalaide.core.compiler.InteractiveCompilationUnit.forceReconcile$(InteractiveCompilationUnit.scala:149)
+	at org.scalaide.core.internal.jdt.model.ScalaSourceFile.forceReconcile(ScalaSourceFile.scala:71)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:54)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2022-12-22 18:56:46,172 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error thrown while initializing the presentation compiler.
+Java Model Exception: Java Model Status [PractiseSpark does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2451)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:1903)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:1925)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths(ClasspathManagement.scala:149)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths$(ClasspathManagement.scala:148)
+	at org.scalaide.core.internal.project.ScalaProject.jdkPaths(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath(ClasspathManagement.scala:136)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath$(ClasspathManagement.scala:135)
+	at org.scalaide.core.internal.project.ScalaProject.scalaClasspath(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ScalaProject.setupCompilerClasspath(ScalaProject.scala:498)
+	at org.scalaide.core.internal.project.ScalaProject.initializeCompilerSettings(ScalaProject.scala:485)
+	at org.scalaide.core.internal.project.ScalaProject.prepareCompilerSettings(ScalaProject.scala:438)
+	at org.scalaide.core.internal.project.ScalaProject.$anonfun$presentationCompiler$1(ScalaProject.scala:162)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.liftedTree1$1(PresentationCompilerProxy.scala:154)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.create(PresentationCompilerProxy.scala:153)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.initialize(PresentationCompilerProxy.scala:118)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.obtainPc$1(PresentationCompilerProxy.scala:80)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.apply(BaseSemanticAction.scala:139)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$3(ScalaSourceFileEditor.scala:105)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$1(ScalaSourceFileEditor.scala:105)
+	at scala.collection.mutable.ArraySeq.foreach(ArraySeq.scala:74)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.reconciled(ScalaSourceFileEditor.scala:103)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5$adapted(ScalaSourceFileEditor.scala:478)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.reconciled(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.reconciled(ScalaSourceFileEditor.scala:379)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2$adapted(ScalaReconcilingStrategy.scala:65)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2022-12-22 18:56:46,175 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error thrown while initializing the presentation compiler.
+Java Model Exception: Java Model Status [PractiseSpark does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2451)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:1903)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:1925)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths(ClasspathManagement.scala:149)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths$(ClasspathManagement.scala:148)
+	at org.scalaide.core.internal.project.ScalaProject.jdkPaths(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath(ClasspathManagement.scala:136)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath$(ClasspathManagement.scala:135)
+	at org.scalaide.core.internal.project.ScalaProject.scalaClasspath(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ScalaProject.setupCompilerClasspath(ScalaProject.scala:498)
+	at org.scalaide.core.internal.project.ScalaProject.initializeCompilerSettings(ScalaProject.scala:485)
+	at org.scalaide.core.internal.project.ScalaProject.prepareCompilerSettings(ScalaProject.scala:438)
+	at org.scalaide.core.internal.project.ScalaProject.$anonfun$presentationCompiler$1(ScalaProject.scala:162)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.liftedTree1$1(PresentationCompilerProxy.scala:154)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.create(PresentationCompilerProxy.scala:153)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.initialize(PresentationCompilerProxy.scala:118)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.obtainPc$1(PresentationCompilerProxy.scala:80)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.apply(BaseSemanticAction.scala:139)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$3(ScalaSourceFileEditor.scala:105)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$1(ScalaSourceFileEditor.scala:105)
+	at scala.collection.mutable.ArraySeq.foreach(ArraySeq.scala:74)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.reconciled(ScalaSourceFileEditor.scala:103)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5$adapted(ScalaSourceFileEditor.scala:478)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.reconciled(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.reconciled(ScalaSourceFileEditor.scala:379)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2$adapted(ScalaReconcilingStrategy.scala:65)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2022-12-22 18:56:46,178 ERROR [main] - org.scala-ide.sdt.core - org.scala-ide.sdt.core - org.scala-ide.sdt.core - 0 - Error thrown while initializing the presentation compiler.
+Java Model Exception: Java Model Status [PractiseSpark does not exist]
+	at org.eclipse.jdt.internal.core.JavaElement.newNotPresentException(JavaElement.java:556)
+	at org.eclipse.jdt.internal.core.JavaModelManager.getPerProjectInfoCheckExistence(JavaModelManager.java:2451)
+	at org.eclipse.jdt.internal.core.JavaProject.getPerProjectInfo(JavaProject.java:1903)
+	at org.eclipse.jdt.internal.core.JavaProject.getRawClasspath(JavaProject.java:1925)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths(ClasspathManagement.scala:149)
+	at org.scalaide.core.internal.project.ClasspathManagement.jdkPaths$(ClasspathManagement.scala:148)
+	at org.scalaide.core.internal.project.ScalaProject.jdkPaths(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath(ClasspathManagement.scala:136)
+	at org.scalaide.core.internal.project.ClasspathManagement.scalaClasspath$(ClasspathManagement.scala:135)
+	at org.scalaide.core.internal.project.ScalaProject.scalaClasspath(ScalaProject.scala:150)
+	at org.scalaide.core.internal.project.ScalaProject.setupCompilerClasspath(ScalaProject.scala:498)
+	at org.scalaide.core.internal.project.ScalaProject.initializeCompilerSettings(ScalaProject.scala:485)
+	at org.scalaide.core.internal.project.ScalaProject.prepareCompilerSettings(ScalaProject.scala:438)
+	at org.scalaide.core.internal.project.ScalaProject.$anonfun$presentationCompiler$1(ScalaProject.scala:162)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.liftedTree1$1(PresentationCompilerProxy.scala:154)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.create(PresentationCompilerProxy.scala:153)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.initialize(PresentationCompilerProxy.scala:118)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.obtainPc$1(PresentationCompilerProxy.scala:80)
+	at org.scalaide.core.internal.compiler.PresentationCompilerProxy.internal(PresentationCompilerProxy.scala:100)
+	at org.scalaide.ui.internal.editor.decorators.BaseSemanticAction.apply(BaseSemanticAction.scala:139)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$3(ScalaSourceFileEditor.scala:105)
+	at scala.runtime.java8.JFunction0$mcV$sp.apply(JFunction0$mcV$sp.java:12)
+	at org.scalaide.util.eclipse.EclipseUtils$$anon$3.run(EclipseUtils.scala:230)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:42)
+	at org.scalaide.util.eclipse.EclipseUtils$.withSafeRunner(EclipseUtils.scala:226)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.$anonfun$reconciled$1(ScalaSourceFileEditor.scala:105)
+	at scala.collection.mutable.ArraySeq.foreach(ArraySeq.scala:74)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$$anon$3.reconciled(ScalaSourceFileEditor.scala:103)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.$anonfun$reconciled$5$adapted(ScalaSourceFileEditor.scala:478)
+	at scala.collection.immutable.List.foreach(List.scala:389)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor$ReconcilingListeners.reconciled(ScalaSourceFileEditor.scala:478)
+	at org.scalaide.ui.internal.editor.ScalaSourceFileEditor.reconciled(ScalaSourceFileEditor.scala:379)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.$anonfun$handleReconciliation$2$adapted(ScalaReconcilingStrategy.scala:65)
+	at scala.Option.foreach(Option.scala:257)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.handleReconciliation(ScalaReconcilingStrategy.scala:65)
+	at org.scalaide.ui.internal.reconciliation.ScalaReconcilingStrategy.reconcile(ScalaReconcilingStrategy.scala:39)
+	at org.eclipse.jdt.internal.ui.text.CompositeReconcilingStrategy.reconcile(CompositeReconcilingStrategy.java:77)
+	at org.eclipse.jface.text.reconciler.MonoReconciler.process(MonoReconciler.java:69)
+	at org.eclipse.jface.text.reconciler.AbstractReconciler$BackgroundThread.run(AbstractReconciler.java:207)
+2022-12-22 18:58:02,830  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:58:02,830  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:58:03,065  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:58:03,065  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:58:03,205  WARN [Worker-2] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:58:03,205  WARN [Worker-2] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:58:04,010  WARN [Worker-2] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:58:04,011  WARN [Worker-2] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:59:50,935  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:59:50,935  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:59:55,579  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:59:55,579  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:59:55,719  WARN [Worker-9] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:59:55,719  WARN [Worker-9] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 18:59:56,438  WARN [Worker-9] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 18:59:56,438  WARN [Worker-9] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:04:22,351  WARN [Worker-6] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:04:22,351  WARN [Worker-6] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:04:23,124  WARN [Worker-6] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:04:23,125  WARN [Worker-6] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:04:36,535  WARN [Worker-4] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:04:36,536  WARN [Worker-4] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:04:36,682  WARN [Worker-11] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:04:36,682  WARN [Worker-11] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:04:37,483  WARN [Worker-11] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:04:37,484  WARN [Worker-11] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:04:50,769  WARN [ModalContext] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:04:50,770  WARN [ModalContext] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:04:51,045  WARN [Worker-14] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:04:51,045  WARN [Worker-14] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:04:51,865  WARN [Worker-14] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:04:51,865  WARN [Worker-14] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:06:04,161  WARN [ModalContext] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:06:04,161  WARN [ModalContext] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:06:04,322  WARN [Worker-12] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:06:04,323  WARN [Worker-12] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:06:05,149  WARN [Worker-12] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:06:05,149  WARN [Worker-12] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:06:43,550  WARN [Worker-6] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:06:43,551  WARN [Worker-6] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:06:44,376  WARN [Worker-6] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:06:44,395  WARN [Worker-6] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:06:59,996  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:06:59,996  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:07:15,554  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:07:15,555  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:07:15,752  WARN [Worker-7] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:07:15,752  WARN [Worker-7] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:07:17,462  WARN [Worker-7] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:07:17,462  WARN [Worker-7] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:09:06,954  WARN [Worker-7] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:09:06,954  WARN [Worker-7] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:09:08,658  WARN [Worker-7] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:09:08,658  WARN [Worker-7] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:09:13,491 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-12-22 19:09:13,493 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-12-22 19:10:32,174  WARN [Worker-7] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:10:32,174  WARN [Worker-7] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:10:32,369  WARN [Worker-1] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:10:32,369  WARN [Worker-1] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:10:32,694  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:10:32,694  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:10:35,456  WARN [Worker-1] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:10:35,457  WARN [Worker-1] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:11:10,904  WARN [Worker-7] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:11:10,905  WARN [Worker-7] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:11:15,124  WARN [Worker-7] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:11:15,124  WARN [Worker-7] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:12:15,061  WARN [Worker-12] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:12:15,062  WARN [Worker-12] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:12:15,131  WARN [Worker-9] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:12:15,131  WARN [Worker-9] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:12:19,770  WARN [Worker-12] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:12:19,771  WARN [Worker-12] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:12:43,001  WARN [Worker-12] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:12:43,001  WARN [Worker-12] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:12:47,062  WARN [Worker-12] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:12:47,063  WARN [Worker-12] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:13:39,014  WARN [Worker-0] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:13:39,014  WARN [Worker-0] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:13:43,093  WARN [Worker-0] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:13:43,093  WARN [Worker-0] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:22:41,785 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-12-22 19:22:41,790 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-12-22 19:22:41,790 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2022-12-22 19:26:51,328  WARN [Worker-1] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:26:51,329  WARN [Worker-1] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:26:56,613  WARN [Worker-1] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:26:56,613  WARN [Worker-1] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:38:54,672  WARN [Worker-10] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:38:54,672  WARN [Worker-10] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:38:58,924  WARN [Worker-10] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:38:58,924  WARN [Worker-10] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:39:44,852  WARN [Worker-4] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:39:44,852  WARN [Worker-4] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:39:48,848  WARN [Worker-4] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:39:48,848  WARN [Worker-4] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:40:59,532  WARN [Worker-6] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:40:59,532  WARN [Worker-6] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-22 19:41:03,553  WARN [Worker-6] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-22 19:41:03,554  WARN [Worker-6] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-29 18:24:40,480  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-29 18:24:40,484  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-29 18:24:40,491  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-29 18:24:40,491  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-29 18:25:20,948 ERROR [Worker-4] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2022-12-29 18:25:20,949 ERROR [Worker-4] - System.err - log4j:WARN Please initialize the log4j system properly.
+2022-12-29 18:25:25,285  WARN [Worker-4] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-29 18:25:25,286  WARN [Worker-4] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-29 18:25:25,348  WARN [Worker-4] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-29 18:25:25,348  WARN [Worker-4] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2022-12-29 18:25:27,858  WARN [Worker-4] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2022-12-29 18:25:27,858  WARN [Worker-4] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-04 13:55:57,084  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-04 13:55:57,087  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-04 13:55:57,098  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-04 13:55:57,099  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-04 13:58:01,124 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2023-01-04 13:58:01,131 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2023-01-04 13:58:01,132 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2023-01-04 13:58:01,136 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2023-01-13 15:59:41,289  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-13 15:59:41,294  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-13 15:59:41,305  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-13 15:59:41,306  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-13 16:42:20,682  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-13 16:42:20,684  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-13 16:42:20,692  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-13 16:42:20,692  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-21 13:41:32,258  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-21 13:41:32,261  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-21 13:41:32,267  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-21 13:41:32,267  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-24 19:59:01,051  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-24 19:59:01,053  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-24 19:59:01,060  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-24 19:59:01,060  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-24 19:59:26,111 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2023-01-24 19:59:26,114 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2023-01-24 19:59:26,114 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2023-01-24 19:59:26,116 ERROR [Text Viewer Hover Presenter] - IScalaPresentationCompiler$ - Ignoring InterruptException
+2023-01-24 19:59:47,102 ERROR [Worker-10] - System.err - log4j:WARN No appenders could be found for logger (org.eclipse.m2e.core.internal.builder.MavenBuilder).
+2023-01-24 19:59:47,102 ERROR [Worker-10] - System.err - log4j:WARN Please initialize the log4j system properly.
+2023-01-24 19:59:49,197  WARN [Worker-10] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-24 19:59:49,197  WARN [Worker-10] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-24 19:59:49,249  WARN [Worker-10] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-24 19:59:49,249  WARN [Worker-10] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-24 19:59:51,734  WARN [Worker-10] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-24 19:59:51,734  WARN [Worker-10] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-29 10:14:46,925  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-29 10:14:46,930  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-29 10:14:46,941  WARN [main] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-01-29 10:14:46,942  WARN [main] - ScalaProject - Project PractiseSpark runs on platform default installation.
+2023-01-29 10:16:00,339  WARN [org.scalaide.ui.internal.reconciliation.ScalaReconciler] - CallByNameParamAtCreationPresenter - Timeout while waiting for `askLoadedTyped` during semantic highlighting.
+2023-09-16 22:49:48,279  WARN [Worker-0] - ScalaProject - Project PractiseSpark has platform default sourceLevel.
+2023-09-16 22:49:48,285  WARN [Worker-0] - ScalaProject - Project PractiseSpark runs on platform default installation.
